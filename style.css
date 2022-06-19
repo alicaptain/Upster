@@ -1,3 +1,11 @@
+* {
+   font-size: 2vw;
+   letter-spacing: 0.2rem;
+
+   --contenter: '12';
+
+}
+
 body {
    display: grid;
    width: 100%;
@@ -8,24 +16,32 @@ body {
    overflow: hidden;
 
    background-color: rgb(99, 118, 223);
+   color: white;
 
    place-items: center;
+   place-content: center;
    transition: transform linear 100ms;
 }
 
 button {
-   width: fit-content;
-   height: 6rem;
+   width: 18rem;
+   height: 4rem;
 
    padding: 1rem;
    border-radius: 1rem;
    border: none;
    background-color: rgba(2, 34, 188, 0.8);
+   color: inherit;
+   letter-spacing: inherit;
+   text-align: center;
+   font-size: inherit;
+   font-weight: 600;
    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
 
 
    cursor: pointer;
    transition: inherit;
+   position: relative;
 
 }
 
@@ -36,7 +52,28 @@ button:hover {
 }
 
 button:active {
-   box-shadow: inner 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+   box-shadow: 0 px 1px 1px rgba(0, 0, 0, 0.2), inner 0 2px 4px 2px rgba(0, 0, 0, 0.2);
    transform: translate(0, 10px);
 
+}
+
+button::before {
+   content: var(--contenter);
+   position: absolute;
+   height: 5rem;
+   width: 5rem;
+   border-radius: 50%;
+   background: red;
+   left: 6.5rem;
+   bottom: 80%;
+   z-index: 1;
+
+   font-size: 2rem;
+
+   display: grid;
+   place-content: center;
+}
+
+button::before:hover {
+   z-index: 1;
 }
