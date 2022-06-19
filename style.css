@@ -10,6 +10,7 @@ body {
    background-color: rgb(99, 118, 223);
 
    place-items: center;
+   transition: transform linear 100ms;
 }
 
 button {
@@ -24,6 +25,7 @@ button {
 
 
    cursor: pointer;
+   transition: inherit;
 
 }
 
